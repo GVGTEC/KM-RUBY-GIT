@@ -1,0 +1,25 @@
+class LerArquivoTextoController < ApplicationController
+
+  #debugger
+
+  def LerArquivo
+       arrayX=[]
+
+       hashX={codigo: 000001, descricao: 'PRODUTO 01', preco: 10.00, estoque: 1000}
+       arrayX << hashX
+
+       hashX={codigo: 000002, descricao: 'PRODUTO 02', preco: 20.00, estoque: 2000}
+       arrayX << hashX
+       
+       hashX={codigo: 000003, descricao: 'PRODUTO 03', preco: 30.00, estoque: 3000}
+       arrayX << hashX
+       
+       hashX={codigo: 000004, descricao: 'PRODUTO 04', preco: 40.00, estoque: 4000}
+       arrayX << hashX
+       
+       hashX={codigo: 000005, descricao: 'PRODUTO 05', preco: 50.00, estoque: 5000}
+       arrayX << hashX
+       
+       @linha=arrayX
+  end
+end

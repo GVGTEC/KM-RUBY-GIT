@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_loja_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Novo Loja
+  <% end %>
+  <h1>Lista lojas</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Identificacao loja</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @lojas) do |loja| %>
+            <td><%= loja.identificacao_loja %></td>
+            <td><%= link_to 'Show', loja %></td>
+        <td><%= link_to 'Edit', edit_loja_path(loja) %></td>
+        <td><%= link_to 'Destroy', loja, method: :delete, data: { confirm: 'Você tem certeza ?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
