@@ -14,9 +14,7 @@ class ProdutosTest < ApplicationSystemTestCase
     visit produtos_url
     click_on "New Produto"
 
-    fill_in "Codigo", with: @produto.codigo
     fill_in "Descricao", with: @produto.descricao
-    fill_in "Preco venda", with: @produto.preco_venda
     click_on "Create Produto"
 
     assert_text "Produto was successfully created"
@@ -27,9 +25,7 @@ class ProdutosTest < ApplicationSystemTestCase
     visit produtos_url
     click_on "Edit", match: :first
 
-    fill_in "Codigo", with: @produto.codigo
     fill_in "Descricao", with: @produto.descricao
-    fill_in "Preco venda", with: @produto.preco_venda
     click_on "Update Produto"
 
     assert_text "Produto was successfully updated"

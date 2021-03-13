@@ -1,7 +1,7 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: %i[ show edit update destroy ]
 
-    # GET /produtos or /produtos.json
+  # GET /produtos or /produtos.json
   def index
     @produtos = Produto.all
   end
@@ -64,6 +64,6 @@ class ProdutosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def produto_params
-      params.require(:produto).permit(:codigo, :descricao, :preco_venda)
+      params.require(:produto).permit(:descricao)
     end
 end

@@ -1,11 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codigo: 1
   descricao: MyString
-  preco_venda: 9.99
 
 two:
-  codigo: 1
   descricao: MyString
-  preco_venda: 9.99
